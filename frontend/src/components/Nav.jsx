@@ -1,0 +1,22 @@
+import { Link } from 'react-router-dom'
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import "./components.css"
+import { useColorMode } from "@chakra-ui/react"
+
+function Nav(){
+    const { colorMode, toggleColorMode } = useColorMode();
+    return(
+        <div className="NavBar">
+            <Link to={"/"}><h3 title='Home'>VCKVault</h3></Link> 
+            <div className="buttons">
+                <button title='Add'><Link to={"/add"}><i class="bi bi-file-earmark-plus"></i></Link></button>
+                <button onClick={toggleColorMode}> 
+                    {colorMode === "light" ? <i class="bi bi-moon-fill"></i> : <i class="bi bi-sun-fill"></i>}
+                </button>
+            </div>
+        </div>
+    )
+}
+
+export default Nav
+

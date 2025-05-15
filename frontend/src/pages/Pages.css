@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Comic+Neue:ital,wght@0,400;0,700;1,700&family=Madimi+One&family=Schoolbell&display=swap');
+
+body{
+    font-family: "Schoolbell", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+button {
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ADD294;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #ADD294;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #ADD294;
+}
+  
+button:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #ADD294;
+}
+  
+button:active {
+    transform: scale(0.9);
+}
+
+/*Add Page CSS*/
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    margin: auto;
+    background: transparent;
+    border: solid 1px #ADD294;
+    box-shadow: #ADD294 5px 8px;
+}
+
+.form button{
+    width: 60%;
+    color: #688754;
+}
+
+.small{
+    font-size: 0.7em;
+}
+  
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+  
+.title::before,.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #ADD294;
+}
+  
+.title::before {
+    width: 18px;
+    height: 18px;
+    background-color: #ADD294;
+}
+  
+.title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+  
+@keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+}
+
+.coolinput {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    max-width: 240px;
+}
+  
+.coolinput label.text {
+    font-size: 0.75rem;
+    color: #688754;
+    font-weight: 700;
+    position: relative;
+    top: 0.5rem;
+    margin: 0 0 0 7px;
+    padding: 0 3px;
+    background: white;
+    border-radius: 8px;
+    width: fit-content;
+}
+  
+.coolinput .input{
+    padding: 11px 10px;
+    font-size: 0.75rem;
+    border: 2px rgb(3, 3, 92) solid;
+    border-radius: 5px;
+    background: white;
+    color: black;
+}
+  
+.coolinput .input:focus {
+    outline: none;
+}
+.coolinput .select {
+    padding: 11px 10px;
+    font-size: 0.75rem;
+    border: 2px rgb(3, 3, 92) solid;
+    border-radius: 5px;
+    background: white;
+    color: black;
+}
+  
+.coolinput .select:focus {
+    outline: none;
+}
+
+.attach {
+    display: flex;
+    border-radius: 8px;
+    border: solid 1px rgb(3, 3, 92);
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.card{
+    background-color: #ADD294;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+.card:hover{
+    background-color: #b6db9e;
+    cursor: pointer;
+}
+.paperlist{
+    text-align: center;
+}
