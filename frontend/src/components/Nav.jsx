@@ -9,6 +9,7 @@ function Nav(){
         <div className="NavBar">
             <Link to={"/"}><h3 title='Home'>VCKVault</h3></Link> 
             <div className="buttons">
+                <button title="Library"><Link to={"https://en.z-library.sk/"}><i class="bi bi-journals"></i></Link></button>
                 <button title='Add'><Link to={"/add"}><i class="bi bi-file-earmark-plus"></i></Link></button>
                 <button onClick={toggleColorMode}> 
                     {colorMode === "light" ? <i class="bi bi-moon-fill"></i> : <i class="bi bi-sun-fill"></i>}
