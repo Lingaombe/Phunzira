@@ -157,17 +157,27 @@ button:active {
     gap: 5px;
 }
 .card{
-    background-color: #ADD294;
+    border: 1px solid #ADD294;
     width: 50%;
     margin: auto;
     text-align: center;
     align-items: center;
     font-weight: 400;
     font-size: 1.2em;
+    border-radius: 80px;
 }
 .card:hover{
-    background-color: #b6db9e;
+    animation: colour 1s ease;
     cursor: pointer;
+}
+@keyframes colour{
+    from{
+        background-color: none;
+    }
+    to{
+        background-color: #b6db9e;
+        box-shadow: inset -100px 0 0 0 #ADD294;
+    }
 }
 .paperlist{
     text-align: center;
