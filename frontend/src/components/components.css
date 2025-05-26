@@ -23,7 +23,7 @@
     margin: auto;
 }
    
-.input {
+.search {
     width: 100%;
     height: 40px;
     line-height: 28px;
@@ -37,17 +37,17 @@
     transition: .3s ease;
 }
    
-.input::placeholder {
+input::placeholder {
   color: black;
 }
    
-.input:focus, input:hover {
+.search:focus, .search:hover {
     outline: none;
     border-color: #ADD294;
     background-color: #fff;
     box-shadow: 0 0 0 4px #add29446;
 }
-   
+
 .icon {
     position: absolute;
     left: 1rem;

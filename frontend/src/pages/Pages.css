@@ -2,8 +2,8 @@
 
 body{
     font-family: "Schoolbell", cursive;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
 
 button {
@@ -24,7 +24,7 @@ button {
   
 button:hover {
     color: white;
-    box-shadow: inset 0 -100px 0 0 #ADD294;
+    box-shadow: inset 0 50px 0 0 #ADD294;
 }
   
 button:active {
@@ -44,10 +44,13 @@ button:active {
     position: relative;
     margin: auto;
     background: transparent;
-    border: solid 1px #ADD294;
-    box-shadow: #ADD294 5px 8px;
+    border: solid 1px #eefae7;
 }
 
+.form:hover{
+    box-shadow: 0 0 10px #ADD294;
+    transition: ease 1s;
+}
 .form button{
     width: 60%;
     color: #688754;
@@ -121,36 +124,16 @@ button:active {
     width: fit-content;
 }
   
-.coolinput .input{
-    padding: 11px 10px;
+.select, .input{
+    padding: 8px 8px;
     font-size: 0.75rem;
-    border: 2px rgb(3, 3, 92) solid;
     border-radius: 5px;
     background: white;
     color: black;
-}
-  
-.coolinput .input:focus {
-    outline: none;
-}
-.coolinput .select {
-    padding: 11px 10px;
-    font-size: 0.75rem;
-    border: 2px rgb(3, 3, 92) solid;
-    border-radius: 5px;
-    background: white;
-    color: black;
-}
-  
-.coolinput .select:focus {
-    outline: none;
+    min-width: 250px;
+    border: #ADD294 solid 1px;
 }
 
-.attach {
-    display: flex;
-    border-radius: 8px;
-    border: solid 1px rgb(3, 3, 92);
-}
 .cards{
     display: flex;
     flex-direction: column;
@@ -165,19 +148,13 @@ button:active {
     font-weight: 400;
     font-size: 1.2em;
     border-radius: 80px;
+    transition: ease-out 1s;
+    box-shadow: inset 0 0 0 0 #ADD294;
 }
 .card:hover{
-    animation: colour 1s ease;
     cursor: pointer;
-}
-@keyframes colour{
-    from{
-        background-color: none;
-    }
-    to{
-        background-color: #b6db9e;
-        box-shadow: inset -100px 0 0 0 #ADD294;
-    }
+    box-shadow: inset -1000px 0 0 0 #ADD294;
+
 }
 .paperlist{
     text-align: center;
