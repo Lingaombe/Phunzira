@@ -1,0 +1,19 @@
+.custum-file-upload {
+  margin: auto;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #cacaca;
+  padding: .5rem;
+  border-radius: 10px;
+}
+
+.custum-file-upload .icons svg {
+  height: 40px;
+  fill: #ADD294;
+}
+
+.custum-file-upload input {
+  display: none;
+}
