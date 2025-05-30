@@ -1,3 +1,6 @@
+.files{
+  display: flex;
+}
 .custum-file-upload {
   margin: auto;
   display: flex;

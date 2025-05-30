@@ -8,7 +8,7 @@ router.post("/", async(req,res)=>{
     const paper = req.body;
     const newPaper = new Paper(paper)
 
-    if(!newPaper.stream || !newPaper.subject || !newPaper.papername || !newPaper.year || !newPaper.papersem || !newPaper.papertype){
+    if(!newPaper.stream || !newPaper.subject || !newPaper.papername || !newPaper.year || !newPaper.papersem || !newPaper.papertype || !newPaper.paperpdf){
         return{ success: false, message: "Please fill all the fields" };
     }
 

@@ -14,7 +14,7 @@ function Home(){
                     <h2><Link to={"/BCS"}>BCS</Link></h2>
                 </div>
                 <div className="card">
-                    <h2><Link to={"/CSE"}>CS Entire</Link></h2>
+                    <h2><Link to={"/BCA"}>BCA</Link></h2>
                 </div>
                 <div className="card">
                     <h2><Link to={"/Biotech"}>Biotech Entire</Link></h2>
