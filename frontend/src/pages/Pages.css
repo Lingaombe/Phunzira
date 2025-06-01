@@ -154,7 +154,9 @@ button:active {
 .card:hover{
     cursor: pointer;
     box-shadow: inset -1000px 0 0 0 #ADD294;
-
+}
+.card:active{
+    transform: scale(0.9);
 }
 .paperlist{
     text-align: center;

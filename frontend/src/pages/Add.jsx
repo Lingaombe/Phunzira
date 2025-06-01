@@ -4,6 +4,7 @@ import { usePaperStore } from '../store/paper.js';
 import { useToast } from '@chakra-ui/react';
 import "./upload.css";
 import { Link } from 'react-router-dom';
+import sound from '../assets/button.mp3';
 
 
 function Add(){
@@ -13,8 +14,8 @@ function Add(){
         papername: "",
         year: "",
         papersem: "",
-        papertype: ""
-        /* paperpdf: null */
+        papertype: "",
+        paperpdf: ""
     });
 
     const toast =useToast();
@@ -22,6 +23,7 @@ function Add(){
     const {createPaper} = usePaperStore()
 
     const handleAddPaper = async()=>{
+        new Audio(sound).play();
         const {success, message} = await createPaper(newPaper);
         if(!success){
             toast({
@@ -49,8 +51,8 @@ function Add(){
             papername: "",
             year: "",
             papersem: "",
-            papertype: ""
-            /* paperpdf: null */
+            papertype: "",
+            paperpdf: ""
         });
     };
     return(

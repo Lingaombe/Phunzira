@@ -24,11 +24,12 @@ const paperSchema = new mongoose.Schema({
     papertype:{
         type: String,
         required: true
-    }/* ,
+    },
     paperpdf:{
-        type: BinData, 
+        type: String, 
         required: true
-     */
+    }
+    
 })
 
 const Paper = mongoose.model('Paper', paperSchema);

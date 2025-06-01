@@ -1,13 +1,18 @@
 import './Pages.css';
 import { Link } from 'react-router-dom';
 import Search from '../components/Search';
+import sound from '../assets/sound.mp3';
+
 
 function Home(){
+    function play(){
+        new Audio(sound).play();
+    }
     return(
         <>
             <Search/>
             <div className="cards">
-                <div className="card">
+                <div className="card" onClick={play}>
                     <h2><Link to={"/BSc"}>BSc</Link></h2>
                 </div>
                 <div className="card">
