@@ -56,8 +56,11 @@ button:active {
     color: #688754;
 }
 
-.small{
+.file{
     font-size: 0.7em;
+    color: #688754;
+    border: 1px solid #ADD294;
+    border-radius: 8px;
 }
   
 .title {
@@ -158,6 +161,35 @@ button:active {
 .card:active{
     transform: scale(0.9);
 }
-.paperlist{
+input[type="submit"] {
+    background: transparent
+}
+
+/* main page css */
+.resources{
+    display: grid;
+    gap: 10px;
+    width: 50vw;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+}
+.resource{
+    border: 1px solid #ADD294;
+    padding: 10px;
+    border-radius: 10px;
     text-align: center;
+    transition: ease-out 0.5s;
+    height: 28vh;
+}
+.resource:hover{
+    cursor: pointer;
+    box-shadow: inset -1000px 0 0 0 #ADD294;
+}
+@media (orientation: portrait){
+    .resources{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .resource{
+        height: fit-content;
+    }
 }

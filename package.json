@@ -12,12 +12,10 @@
   "description": "",
   "dependencies": {
     "@ilovepdf/ilovepdf-nodejs": "^0.3.0",
-    "dotenv": "^16.5.0",
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "mongoose": "^8.14.0",
     "multer": "^2.0.0",
-    "nodemon": "^3.1.10",
-    "react-wavify": "^1.11.1",
-    "use-sound": "^5.0.0"
+    "nodemon": "^3.1.10"
   }
 }

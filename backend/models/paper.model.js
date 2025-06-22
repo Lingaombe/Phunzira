@@ -1,4 +1,4 @@
-import mongoose, { trusted } from "mongoose";
+/* import mongoose, { trusted } from "mongoose";
 
 const paperSchema = new mongoose.Schema({
     stream:{
@@ -34,4 +34,4 @@ const paperSchema = new mongoose.Schema({
 
 const Paper = mongoose.model('Paper', paperSchema);
 
-export default Paper;
+export default Paper; */

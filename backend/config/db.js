@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+/* import mongoose from "mongoose";
 
 export const connectDB = async ()=>{
     try{
@@ -6,7 +6,6 @@ export const connectDB = async ()=>{
         console.log(`mongo con: ${conn.connection.host}`);
     } catch(error){
         console.error(`error: ${error.message}`);
-        console.log("here")
         process.exit(1);
     }
-}
+} */

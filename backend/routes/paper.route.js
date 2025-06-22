@@ -1,10 +1,29 @@
-import express from 'express';
+/* import express from 'express';
+
+import multer from 'multer';
+import cors from "cors";
+
+const app = express();
+app.use(express.json());
+app.use(cors());
 
 import Paper from '../models/paper.model.js';
 
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './uploads')
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = file.originalname
+    cb(null, uniqueSuffix)
+  }
+})
+const upload = multer({ storage: storage })
+
 const router = express.Router();
 
-router.post("/", async(req,res)=>{
+router.post("/", upload.single('file'), async(req,res)=>{
     const paper = req.body;
     const newPaper = new Paper(paper)
 
@@ -21,7 +40,8 @@ router.post("/", async(req,res)=>{
     }
 })
 
-router.get("/", async(req,res)=>{
+app.get("/", async(req,res)=>{
+    res.send("Welcome to the Paper API");
     try{
         const papers = await Paper.find({});
         res.status(200).json({ success: true, data: papers });
@@ -32,4 +52,4 @@ router.get("/", async(req,res)=>{
 })
 
 
-export default router;
+export default router; */

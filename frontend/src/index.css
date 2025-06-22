@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Schoolbell";
+  src: local("Schoolbell"),
+  url("./fonts/Schoolbell.ttf") format("truetype");
+}
+.font{
+  font-family: "Schoolbell", sans-serif;
+}
