@@ -1,4 +1,4 @@
-🎓 Phunzira — Student Resource Hub
+🎓 **Phunzira — Student Resource Hub**
 
 **Phunzira** is a student-focused web application that allows users to upload and browse past exam papers and access free academic books and resources (like those from Project Gutenberg). Built with React, MongoDB, OneDrive API, and Chakra UI for a clean, accessible experience.
 
