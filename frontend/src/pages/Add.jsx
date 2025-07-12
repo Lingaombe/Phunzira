@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { usePaperStore } from '../store/paper.js';
 import { useToast } from '@chakra-ui/react';
 
+import axios from 'axios';
 import sound from '../assets/button.mp3';
 
 
@@ -12,19 +12,17 @@ function Add(){
         papername: "",
         year: "",
         papersem: "",
-        papertype: "",
-        paperpdf: ""
+        papertype: ""
     });
+    const [paperpdf, setPaperPdf] = useState("");
 
     const toast = useToast();
-
-    const {createPaper} = usePaperStore()
 
     function music() {
         new Audio(sound).play();
     };
 
-    async function handleAddPaper(e){
+    const handleAddPaper = async (e) => {
 
         e.preventDefault();
 
@@ -35,14 +33,28 @@ function Add(){
         formData.append("year", newPaper.year);
         formData.append("papersem", newPaper.papersem);
         formData.append("papertype", newPaper.papertype);
-        formData.append("paperpdf", newPaper.paperpdf);
+        formData.append("paperpdf", paperpdf);
 
         
-        console.log(`newPaper.paperpdf: ${newPaper.paperpdf}`);
-        
-
-        const {success, message} = await createPaper(newPaper);
-        if(!success){
+        formData.forEach((value, key) => {
+            console.log(key, value); });
+        const result = await axios.post("/papers", formData, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }); 
+        console.log(result);
+        /* if(result.data.success){
+            toast({
+                title: "Success",
+                status: "success",
+                description: message,
+                duration: 3000,
+                isClosable: false,
+                position: "bottom"
+            });
+        }
+        else{
             toast({
                 title: "Error",
                 status: "error",
@@ -51,18 +63,18 @@ function Add(){
                 isClosable: false,
                 position: "bottom"
             })
-        }
-        else{
-            toast({
-                title: "Success",
-                status: "success",
-                description: message,
-                duration: 3000,
-                isClosable: false,
-                position: "bottom"
-            })
-        }
+        } */
+/*         setNewPaper({
+            stream: "", 
+            subject: "",
+            papername: "",  
+            year: "",
+            papersem: "",
+            papertype: ""
+        });
+        setPaperPdf(""); */
     };
+
     return(
         <>
             <form className="form" onSubmit={handleAddPaper} method="POST" action={"/papers"} enctype="multipart/form-data">
@@ -108,7 +120,7 @@ function Add(){
                         <option value="Minor">Minor</option>
                     </select><br/>
 
-                    <input type="file" name="file" className="file" multiple accept=".pdf" required onChange={(e) => setNewPaper({ ...newPaper, paperpdf: e.target.files[0] })}  />                               
+                    <input type="file" name="file" className="file" multiple accept=".pdf" required onChange={(e) => setPaperPdf(e.target.files[0] )}  />                               
                     
                 </div>
                     

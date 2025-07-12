@@ -1,4 +1,4 @@
-import {create} from "zustand"; //global state management library
+/* import {create} from "zustand"; //global state management library
 
 export const usePaperStore = create((set) => ({
     papers: [],
@@ -35,3 +35,4 @@ export const usePaperStore = create((set) => ({
     },
 }));
 
+ */
