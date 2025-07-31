@@ -10,10 +10,10 @@ function Nav(){
         <div className="NavBar">
             <div className="home">
                 <img src={icon} alt="VCKVault Icon" className="logo" />
-                <Link to={"/"}><h3 title='Home'>VCKVault</h3></Link> 
+                <Link to={"/"}><h3 title='Home'>Phunzira</h3></Link> 
             </div>
             <div className="buttons">
-                <button title="zLibrary"><Link to={"https://en.z-library.sk/"} target="_blank"><i className="bi bi-journals"></i></Link></button>
+                <button title="ToDo"><Link to={"/todo"}><i className="bi bi-journals"></i></Link></button>
                 <button title='Add'><Link to={"/add"}><i className="bi bi-file-earmark-plus"></i></Link></button>
                 <button onClick={toggleColorMode}> 
                     {colorMode === "light" ? <i className="bi bi-moon-fill"></i> : <i className="bi bi-sun-fill"></i>}

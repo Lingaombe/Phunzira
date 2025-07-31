@@ -166,6 +166,12 @@ input[type="submit"] {
 }
 
 /* main page css */
+.mid{
+    display: flex;
+    place-content: center;
+    text-align: center;
+    height: 80vh;
+}
 .resources{
     display: grid;
     gap: 10px;
@@ -177,6 +183,7 @@ input[type="submit"] {
     border: 1px solid #ADD294;
     padding: 10px;
     border-radius: 10px;
+    place-content: center;
     text-align: center;
     transition: ease-out 0.5s;
     height: 28vh;
