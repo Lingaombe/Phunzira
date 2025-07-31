@@ -38,33 +38,33 @@ function Add(){
         
         formData.forEach((value, key) => {
             console.log(key, value); });
-        const result = await axios.post("/papers", formData, {
+        const result = await axios.post("http://localhost:5000/papers", formData, {
             headers: {
-                'Content-Type': 'application/json'
-            }
+                'Content-Type': 'multipart/form-data'
+            },
         }); 
         console.log(result);
-        /* if(result.data.success){
+        if(result.status == 201){
             toast({
                 title: "Success",
                 status: "success",
-                description: message,
+                description: "Paper added successfully!",
+                duration: 3000,
+                isClosable: false,
+                position: "bottom"
+            });
+        }else if(!result.status){
+            toast({
+                title: "Success",
+                status: "success",
+                description: "Failed to add paper.",
                 duration: 3000,
                 isClosable: false,
                 position: "bottom"
             });
         }
-        else{
-            toast({
-                title: "Error",
-                status: "error",
-                description: message,
-                duration: 3000,
-                isClosable: false,
-                position: "bottom"
-            })
-        } */
-/*         setNewPaper({
+    
+        setNewPaper({
             stream: "", 
             subject: "",
             papername: "",  
@@ -72,7 +72,7 @@ function Add(){
             papersem: "",
             papertype: ""
         });
-        setPaperPdf(""); */
+        setPaperPdf(""); 
     };
 
     return(

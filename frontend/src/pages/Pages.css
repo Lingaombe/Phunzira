@@ -167,9 +167,7 @@ input[type="submit"] {
 
 /* main page css */
 .mid{
-    display: flex;
     place-content: center;
-    text-align: center;
     height: 80vh;
 }
 .resources{
@@ -199,4 +197,9 @@ input[type="submit"] {
     .resource{
         height: fit-content;
     }
+}
+.todo{
+    width: 50vw;
+    margin: auto;
+    height: 100%;
 }
