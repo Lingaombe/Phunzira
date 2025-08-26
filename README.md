@@ -1,6 +1,6 @@
 🎓 **Phunzira — Student Resource Hub**
 
-**Phunzira** is a student-focused web application that allows users to upload and browse past exam papers and access free academic books and resources (like those from Project Gutenberg). Built with React, MongoDB, OneDrive API, and Chakra UI for a clean, accessible experience.
+**Phunzira** is a student-focused web application that allows users to upload and browse past exam papers and access free academic books and resources (like those from Project Gutenberg). Built with React, MongoDB, Multer and Chakra UI for a clean, accessible experience.
 
 ---
 
@@ -11,29 +11,18 @@ git clone https://github.com/yourusername/Phunzira.git
 cd Phunzira
 ```
 
-### 📁 Project Structure
-
-```
-Phunzira/
-├── client/       # React + Chakra UI frontend
-├── server/       # Node.js + Express + MongoDB backend
-└── README.md
-```
-
----
-
 ## 🛠 Tech Stack
 
 * **Frontend:** React.js + Chakra UI
 * **Backend:** Node.js + Express.js
 * **Database:** MongoDB
-* **File Storage:** OneDrive API
+* **File Handling:** Multer
 
 ---
 
 ## 🔐 Setup Environment Variables
 
-Create a `.env` file inside `/server/`:
+Create a `.env` file, remember to `.gitignore`:
 
 ```env
 MONGO_URI=your_mongodb_connection_string
@@ -42,16 +31,12 @@ ONEDRIVE_CLIENT_SECRET=your_onedrive_client_secret
 ONEDRIVE_REDIRECT_URI=http://localhost:5000/auth/callback
 ```
 
-> ✅ Add `.env` to `.gitignore` to keep credentials safe
-
----
-
 ## 🧪 Run the Project
 
 ### Backend
 
 ```bash
-cd server
+cd backend
 npm install
 npm run dev
 ```
@@ -59,7 +44,7 @@ npm run dev
 ### Frontend
 
 ```bash
-cd ../client
+cd frontend
 npm install
 npm run dev
 ```
@@ -71,7 +56,7 @@ npm run dev
 * 📤 Upload and view past exam papers
 * 🔍 Search past papers by subject, year, tags
 * 📚 Browse free books from Project Gutenberg
-* ☁️ Store files securely using OneDrive API
+* ☁️ Store files securely
 * 🧘‍♀️ Chakra UI for responsive and clean design
 
 ---
